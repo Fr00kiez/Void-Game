@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="626.0" styleClass="background" stylesheets="@../darkTheme.css" text="VOID Game" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="background" stylesheets="@../darkTheme.css">
+         <children>
+            <TextArea layoutX="10.0" layoutY="14.0" prefHeight="166.0" prefWidth="604.0" styleClass="background" stylesheets="@../darkTheme.css" text="Kamu terbangun di suatu ruangan yang begitu gelap.&#10;Kamu melihat selembar kertas, setelah kamu amati ternyata itu adalah kertas sayembara.&#10;Di ujung kertas tersebut tertulis:&#10;                                           &quot;Harap Tuliskan Namamu Disini&quot;&#10;&#10;&#10;&#10;" />
+            <TextArea layoutX="10.0" layoutY="187.0" prefHeight="52.0" prefWidth="604.0" text="                            Kamu segera mengambil sebuah pena dan menulis" />
+            <TextField layoutX="209.0" layoutY="278.0" />
+         </children></AnchorPane>
+  </content>
+</TitledPane>

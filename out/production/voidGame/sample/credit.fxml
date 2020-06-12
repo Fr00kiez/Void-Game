@@ -5,7 +5,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="626.0" styleClass="background" stylesheets="@darkTheme.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="265.0" layoutY="38.0" text="Developer Team">
@@ -20,6 +19,6 @@
       <Label layoutX="250.0" layoutY="207.0" text="Syarial Akbar Muzaki" />
       <Label layoutX="263.0" layoutY="268.0" text="Character Design" />
       <Label layoutX="264.0" layoutY="301.0" text="Filia Sekar Murty" />
-      <Button layoutX="270.0" layoutY="353.0" mnemonicParsing="false" text="Kembali" />
+      <Button id="kembali" layoutX="270.0" layoutY="353.0" mnemonicParsing="false" text="Kembali" />
    </children>
 </AnchorPane>

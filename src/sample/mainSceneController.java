@@ -7,7 +7,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.scene.Node;
 
@@ -48,7 +47,7 @@ public class mainSceneController implements Initializable{
     }
 
     @FXML
-    public void exitbuttonOnAction(MouseEvent event) {
+    public void exitbuttonOnAction(ActionEvent event) throws IOException{
         Stage primarystage = (Stage) exitbutton.getScene().getWindow();
         primarystage.close();
     }

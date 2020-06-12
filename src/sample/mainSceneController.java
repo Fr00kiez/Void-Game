@@ -18,14 +18,17 @@ import java.util.ResourceBundle;
 public class mainSceneController implements Initializable{
 
     @FXML
-    private Button playbutt;
+    private Button playbutton;
     @FXML
-    private Button creditbutt;
+    private Button creditbutton;
     @FXML
-    private Button exitbutt;
+    private Button exitbutton;
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) { }
 
     @FXML
-    public void setPlaybuttlaybuttOnAction(ActionEvent event) throws IOException {
+    public void playbuttonOnAction(ActionEvent event) throws IOException {
         Parent mainScene = FXMLLoader.load(getClass().getResource("secondScene.fxml"));
         Scene mainSceneScene = new Scene(mainScene);
         Stage mainSceneStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -35,7 +38,7 @@ public class mainSceneController implements Initializable{
     }
 
     @FXML
-    public void setCreditbuttOnAction(ActionEvent event) throws IOException {
+    public void creditbuttonOnAction(ActionEvent event) throws IOException {
         Parent mainScene = FXMLLoader.load(getClass().getResource("credit.fxml"));
         Scene mainSceneScene = new Scene(mainScene);
         Stage mainSceneStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -45,8 +48,8 @@ public class mainSceneController implements Initializable{
     }
 
     @FXML
-    public void setExitbuttOnAction(MouseEvent event) {
-        Stage primarystage = (Stage) exitbutt.getScene().getWindow();
+    public void exitbuttonOnAction(MouseEvent event) {
+        Stage primarystage = (Stage) exitbutton.getScene().getWindow();
         primarystage.close();
     }
 }

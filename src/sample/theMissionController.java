@@ -10,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 import javafx.scene.Node;
 
@@ -17,27 +18,17 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class characterViewController implements Initializable {
+public class theMissionController implements Initializable {
     @FXML
-    private Label namelabel;
+    private Button lanjutkanButton;
 
     @FXML
-    private Button lanjutbutton;
+    private Label narasiSatuLabel;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) { }
 
     public void playerName (String text) {
-        namelabel.setText(text);
-    }
-
-    @FXML
-    public void lanjutbuttonOnAction(ActionEvent event) throws IOException {
-        Parent characterView = FXMLLoader.load(getClass().getResource("story.fxml"));
-        Scene characterViewScene = new Scene(characterView);
-        Stage characterViewStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        characterViewStage.hide();
-        characterViewStage.setScene(characterViewScene);
-        characterViewStage.show();
+        narasiSatuLabel.setText("Selamat pagi, kamu yang bernama " + text + " ?");
     }
 }

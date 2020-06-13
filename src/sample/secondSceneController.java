@@ -44,14 +44,9 @@ public class secondSceneController implements Initializable {
 
             Optional<ButtonType> result = alert.showAndWait();
             if (result.get() == ButtonType.OK){
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("characterView.fxml"));
-                Parent secondScene = loader.load();
+                Context.getInstance().getPlayer().setName(namefield.getText());
 
-                characterViewController cvw = loader.getController();
-                cvw.playerName(namefield.getText());
-
-                /*theMissionController tmw = loader.getController();
-                tmw.playerName(namefield.getText());*/
+                Parent secondScene = FXMLLoader.load(getClass().getResource("characterView.fxml"));
 
                 Scene secondSceneScene = new Scene(secondScene);
                 Stage secondSceneStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -60,9 +55,5 @@ public class secondSceneController implements Initializable {
                 secondSceneStage.show();
             }
         }
-
-
-
-
     }
 }

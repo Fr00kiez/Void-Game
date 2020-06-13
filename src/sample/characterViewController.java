@@ -8,8 +8,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.scene.Node;
 
@@ -25,10 +23,8 @@ public class characterViewController implements Initializable {
     private Button lanjutbutton;
 
     @Override
-    public void initialize(URL url, ResourceBundle rb) { }
-
-    public void playerName (String text) {
-        namelabel.setText(text);
+    public void initialize(URL url, ResourceBundle rb) {
+        namelabel.setText(Context.getInstance().getPlayer().getName());
     }
 
     @FXML

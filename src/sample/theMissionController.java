@@ -26,9 +26,18 @@ public class theMissionController implements Initializable {
     private Label narasiSatuLabel;
 
     @Override
-    public void initialize(URL url, ResourceBundle rb) { }
+    public void initialize(URL url, ResourceBundle rb) {
+        String name = Context.getInstance().getPlayer().getName();
+        narasiSatuLabel.setText("Selamat pagi, kamu yang bernama " + name + " ?");
+    }
 
-    public void playerName (String text) {
-        narasiSatuLabel.setText("Selamat pagi, kamu yang bernama " + text + " ?");
+    @FXML
+    public void lanjutkanbuttonOnAction(ActionEvent event) throws IOException {
+        Parent characterView = FXMLLoader.load(getClass().getResource("attackGoblin.fxml"));
+        Scene characterViewScene = new Scene(characterView);
+        Stage characterViewStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        characterViewStage.hide();
+        characterViewStage.setScene(characterViewScene);
+        characterViewStage.show();
     }
 }

@@ -7,7 +7,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="626.0" styleClass="background" stylesheets="@darkTheme.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.secondSceneController">
    <children>
-      <TextField id="nameField" layoutX="167.0" layoutY="163.0" prefHeight="37.0" prefWidth="293.0" />
+      <TextField id="namefield" fx:id="namefield" layoutX="167.0" layoutY="163.0" onAction="#okbuttonOnAction" onInputMethodTextChanged="#okbuttonOnAction" prefHeight="37.0" prefWidth="293.0" />
       <Label layoutX="24.0" layoutY="35.0" text="Kamu terbangun di suatu ruangan yang begitu gelap." />
       <Label layoutX="24.0" layoutY="65.0" text="Kamu melihat selembar kertas, setelah kamu amati ternyata itu adalah kertas sayembara." />
       <Label layoutX="24.0" layoutY="93.0" text="Di ujung kertas tersebut tertulis :" />

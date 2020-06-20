@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="626.0" styleClass="background" stylesheets="@darkTheme.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.creditController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="626.0" styleClass="background" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.creditController">
    <children>
       <Label layoutX="265.0" layoutY="38.0" text="Developer Team">
          <font>
@@ -21,4 +22,8 @@
       <Label layoutX="264.0" layoutY="301.0" text="Filia Sekar Murty" />
       <Button id="kembalibutton" fx:id="kembalibutton" layoutX="270.0" layoutY="353.0" mnemonicParsing="false" onAction="#kembalibuttonOnAction" onMouseClicked="#kembalibuttonOnAction" text="Kembali" />
    </children>
+   <stylesheets>
+      <URL value="@darkTheme.css" />
+      <URL value="@../sample/darkTheme.css" />
+   </stylesheets>
 </AnchorPane>

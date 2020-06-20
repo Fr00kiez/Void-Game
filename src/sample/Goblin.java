@@ -1,7 +1,7 @@
-package sample;
+/*package sample;
 
-public class Goblin extends Enemies {
+public class Goblin extends Entities {
     public Goblin (String nameEnemies){
-        super(nameEnemies);
+        String (nameEnemies);
     }
-}
+}*/

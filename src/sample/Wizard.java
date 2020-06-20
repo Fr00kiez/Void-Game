@@ -1,11 +1,7 @@
-package sample;
+/*package sample;
 
-public class Wizard extends Enemies {
+public class Wizard extends Entities {
     public Wizard(String nameEnemies){
         super(nameEnemies);
     }
-
-    public void helathEnemies(){
-        int healthEnemies = 200;
-    }
-}
+}*/

@@ -6,12 +6,8 @@
 <?import javafx.scene.layout.Pane?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="626.0" styleClass="background" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.storyController">
-   <Label layoutX="18.0" layoutY="45.0" text="Kamu mendengar suara ketukan." />
-   <Label layoutX="247.0" layoutY="45.0" text="Kamu pun pergi menghampiri suara tersebut." />
-   <Label layoutX="18.0" layoutY="78.0" text="Ketukan itu kembali terdengar dari pintu depan rumahmu." />
-   <Label layoutX="18.0" layoutY="109.0" text="Setelah kamu membuka pintu, kamu melihat seorang prajurit berdiri dengan selembar" />
-   <Label layoutX="18.0" layoutY="138.0" text="kertas ditangannya." />
-   <Button id="ohButton" fx:id="ohButton" layoutX="138.0" layoutY="237.0" mnemonicParsing="false" onAction="#ohButtonOnAction" onMouseClicked="#ohButtonOnAction" text="Selamat pagi pak, ada yang bisa saya bantu?" />
+   <Label id="narasiCerita" fx:id="narasiCerita" layoutX="18.0" layoutY="45.0" />
+   <Button id="ohButton" fx:id="ohButton" layoutX="134.0" layoutY="255.0" mnemonicParsing="false" onAction="#ohButtonOnAction" onMouseClicked="#ohButtonOnAction" />
    <stylesheets>
       <URL value="@darkTheme.css" />
       <URL value="@../sample/darkTheme.css" />

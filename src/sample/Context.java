@@ -7,6 +7,7 @@ public class Context {
         return instance;
     }
 
+    //Getter
     private Player player = new Player();
 
     public Player getPlayer() {

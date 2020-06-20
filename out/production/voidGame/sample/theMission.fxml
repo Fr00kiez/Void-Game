@@ -15,7 +15,7 @@
             <Image url="@../sprites/knight.png" />
          </image>
       </ImageView>
-      <Button id="lanjutkanButton" fx:id="lanjutkanButton" layoutX="245.0" layoutY="289.0" mnemonicParsing="false" onAction="#lanjutkanbuttonOnAction" onMouseClicked="#lanjutkanbuttonOnAction" prefHeight="25.0" prefWidth="154.0" text="Lanjutkan" />
+      <Button id="lanjutkanButton" fx:id="lanjutkanButton" layoutX="245.0" layoutY="289.0" mnemonicParsing="false" onAction="#lanjutkanButtonOnAction" onMouseClicked="#lanjutkanButtonOnAction" prefHeight="25.0" prefWidth="154.0" text="Lanjutkan" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363636" height="224.0" layoutX="41.0" layoutY="24.0" stroke="BLACK" strokeType="INSIDE" width="435.0" />
       <Label id="narasiSatuLabel" fx:id="narasiSatuLabel" layoutX="58.0" layoutY="48.0" text="Label" />
    </children>

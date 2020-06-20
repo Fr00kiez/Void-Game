@@ -8,9 +8,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
-import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 import javafx.scene.Node;
 
@@ -28,16 +25,33 @@ public class theMissionController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         String name = Context.getInstance().getPlayer().getName();
-        narasiSatuLabel.setText("Selamat pagi, kamu yang bernama " + name + " ?");
+        narasiSatuLabel.setText("Selamat pagi, kamu yang bernama " + name + " ?\n" +
+                "Sayembara yang kamu ikuti sudah dimulai.\n" +
+                "Tugas kamu adalah memburu seorang Wizard.");
     }
 
+    public void narasiKedua(){
+        narasiSatuLabel.setText("Wizard itu tinggal di kawasan hutan sebelah Timur,\n" +
+                "Wizard itu tentunya tidak ingin diganggu jadi\n" +
+                "berhati-hatilah dengan Goblin yang berjaga disana.\n");
+    }
+
+
     @FXML
-    public void lanjutkanbuttonOnAction(ActionEvent event) throws IOException {
-        Parent characterView = FXMLLoader.load(getClass().getResource("attackGoblin.fxml"));
-        Scene characterViewScene = new Scene(characterView);
-        Stage characterViewStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        characterViewStage.hide();
-        characterViewStage.setScene(characterViewScene);
-        characterViewStage.show();
+    public void lanjutkanButtonOnAction( ) throws IOException {
+        narasiKedua();
+        lanjutkanButton.setOnAction(event -> {
+            Parent characterView = null;
+            try {
+                characterView = FXMLLoader.load(getClass().getResource("attackGoblin.fxml"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Scene characterViewScene = new Scene(characterView);
+            Stage characterViewStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            characterViewStage.hide();
+            characterViewStage.setScene(characterViewScene);
+            characterViewStage.show();
+        });
     }
 }

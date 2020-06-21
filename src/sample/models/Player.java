@@ -1,11 +1,11 @@
 package sample.models;
 
-public class Player /*extends Entities*/ {
+public class Player extends Entities {
     private String name;
 
-   /* public player (int health, int attackDamage, float guardPercentage, String nameEnemies){
-        super(health,attackDamage,guardPercentage,nameEnemies);
-    }*/
+    public Player(int health, int attackDamage, float guardPercentage, String nameEnemies) {
+        super(health, attackDamage, guardPercentage, nameEnemies);
+    }
 
     //Getter
 

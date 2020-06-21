@@ -3,15 +3,14 @@ package sample.models;
 import java.io.ObjectInputFilter;
 
 public class Entities {
-    protected String nameEnemies;
-    private ObjectInputFilter.Status status;
+    protected String name;
     private int health = 100;
     private int attackDamage = 0;
     private float guardPercentage = (float) 0.75;
     private boolean isGuarding = false;
 
-    public Entities(int health, int attackDamage, float guardPercentage, String nameEnemies){
-        this.nameEnemies = nameEnemies;
+    public Entities(int health, int attackDamage, float guardPercentage, String name){
+        this.name = name;
         this.health = health;
         this.attackDamage = attackDamage;
         this.guardPercentage = guardPercentage;
@@ -19,8 +18,8 @@ public class Entities {
 
     //Getter
 
-    public String getnameEnemies() {
-        return nameEnemies;
+    public String getName() {
+        return name;
     }
 
     public int getHealth () {
@@ -37,13 +36,14 @@ public class Entities {
 
     //Setter
 
-    public void setnameEnemies(String nameEnemies) {
-        this.nameEnemies = nameEnemies;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public boolean setGuarding (boolean status) {
+    public String setGuarding (boolean status) {
         isGuarding = status;
-        return isGuarding;
+
+        return getName() + " melakukan pertahanan.";
     }
 
     public int setHealth (int newHealth) {
@@ -54,15 +54,31 @@ public class Entities {
 
     //Attack Bot
 
-    public void attack(Entities enemy) {
-        if (!enemy.getGuarding()) {
-            int newHealth = enemy.getHealth() - attackDamage;
-            enemy.setHealth(newHealth);
-            return;
+    public String[] attack(Entities enemy) {
+        if (isGuarding) {
+            setGuarding(false);
         }
 
-        float newHealth = enemy.getHealth() - (attackDamage * enemy.getGuardPercentage());
-        enemy.setGuarding(false);
+        int newHealth;
+        if (!enemy.getGuarding()) {
+            newHealth = enemy.getHealth() - attackDamage;
+        } else {
+            newHealth = (int) (enemy.getHealth() - (attackDamage * (1 - enemy.getGuardPercentage())));
+            enemy.setGuarding(false);
+        }
+
+        if (newHealth < 0) {
+            newHealth = 0;
+        }
+
+        String[] messages = {
+                getName() + " menyerang " + enemy.getName() + " dengan damage " + attackDamage + ".",
+                "Health " + enemy.getName() + " berkurang dari " + enemy.getHealth() + " menjadi " + newHealth + ".",
+        };
+
+        enemy.setHealth(newHealth);
+
+        return messages;
     }
 
     //Action

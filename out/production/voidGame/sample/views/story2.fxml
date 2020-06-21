@@ -3,14 +3,23 @@
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="626.0" styleClass="background" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.story2Controller">
    <stylesheets>
       <URL value="@../styles/darkTheme.css" />
    </stylesheets>
    <children>
-      <Label id="narasiCerita" fx:id="narasiCerita" layoutX="18.0" layoutY="45.0" />
-      <Button id="ohButton" fx:id="ohButton" layoutX="217.0" layoutY="218.0" mnemonicParsing="false" onAction="#ohButtonOnAction" onMouseClicked="#ohButtonOnAction" />
+      <ImageView fitHeight="400.0" fitWidth="643.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../sprites/walk.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363636d3" height="200.0" layoutX="18.0" layoutY="45.0" stroke="BLACK" strokeType="INSIDE" width="442.0" />
+      <Button id="ohButton" fx:id="ohButton" layoutX="153.0" layoutY="264.0" mnemonicParsing="false" onAction="#ohButtonOnAction" onMouseClicked="#ohButtonOnAction" opacity="0.84" />
+      <Label id="narasiCerita" fx:id="narasiCerita" layoutX="32.0" layoutY="75.0" text="Label" />
    </children>
 </Pane>

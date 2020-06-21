@@ -1,6 +1,5 @@
 package sample.controllers;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -15,7 +14,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class story2Controller implements Initializable {
+public class story3Controller implements Initializable {
     @FXML
     private Button ohButton;
     @FXML
@@ -23,27 +22,29 @@ public class story2Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        narasiCerita.setText("Tidak lama setelah Prajurit itu datang, kamu segera bersiap\n" +
-                "dan pergi ke hutan tempat Wizard itu berada.");
-        ohButton.setText("Duna luar aku datang!");
+        narasiCerita.setText("Kamu berusaha mengingat dimana kamu\n" +
+                "pernah melihat pohon Beringin\n" +
+                "Kamu menyusuri pinggiran sungai sampai\n" +
+                "akhirnya kamu melihat sebuah pohon\n" +
+                "yang besar dan teduh.\n");
+        ohButton.setText("Ok, sekarang belok ke kanan");
     }
 
-    public void StageGoblin(){
-        narasiCerita.setText("Kamu berjalan melewati sungai dan masuk kedalam hutan.\n" +
-                "Kamu berhenti melangkah dan mulai mengamati lingkungan\n" +
-                "sekitar, lalu kamu melihat sebuah bayangan mendekatimu.\n" +
-                "\n" +
+    public void stageWizard(){
+        narasiCerita.setText("Oops, sepertinya kamu tidak menemukan Wizard itu.\n" +
+                "Tapi...\n" +
+                "Wizard itu yang menemukan kamu!\n" +
                 "KAMU DISERANG!\n");
-        ohButton.setText("Bersiap untuk menyerang");
+        ohButton.setText("Ah, sangat mengejutkan.");
     }
 
     @FXML
     public void ohButtonOnAction( ) throws IOException {
-        StageGoblin();
+        stageWizard();
         ohButton.setOnAction(event -> {
             Parent mission = null;
             try {
-                mission = FXMLLoader.load(getClass().getResource("/sample/views/attackGoblin.fxml"));
+                mission = FXMLLoader.load(getClass().getResource("/sample/views/attackWizard.fxml"));
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -54,4 +55,5 @@ public class story2Controller implements Initializable {
             missionStage.show();
         });
     }
+
 }

@@ -68,7 +68,7 @@ public class Entities {
     //Action
 
     //Enemies
-   /* Enemies player = new Enemies(100, 35, 0.65);
-    Enemies enemy = new Enemies(70, 20, 0.50);*/
+   /*Entities player = new Entities(100, 35, 0.65);
+    Entities enemy = new Entities(70, 20, 0.50);*/
 
 }

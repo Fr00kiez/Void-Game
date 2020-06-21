@@ -10,41 +10,40 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import javafx.scene.Node;
-import sample.models.Context;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class theMissionController implements Initializable {
+public class story2Controller implements Initializable {
     @FXML
-    private Button lanjutkanButton;
-
+    private Button ohButton;
     @FXML
-    private Label narasiSatuLabel;
+    private Label narasiCerita;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        String name = Context.getInstance().getPlayer().getName();
-        narasiSatuLabel.setText("Selamat pagi, kamu yang bernama " + name + " ?\n" +
-                "Sayembara yang kamu ikuti sudah dimulai.\n" +
-                "Tugas kamu adalah memburu seorang Wizard.");
+        narasiCerita.setText("Tidak lama setelah Prajurit itu datang, kamu segera bersiap\n" +
+                "dan pergi ke hutan tempat Wizard itu berada.");
+        ohButton.setText("Duna luar aku datang!");
     }
 
-    public void narasiKedua(){
-        narasiSatuLabel.setText("Wizard itu tinggal di kawasan hutan sebelah Timur,\n" +
-                "Wizard itu tentunya tidak ingin diganggu jadi\n" +
-                "berhati-hatilah dengan Goblin yang berjaga disana.\n");
+    public void StageGoblin(){
+        narasiCerita.setText("Kamu berjalan melewati sungai dan masuk kedalam hutan.\n" +
+                "Kamu berhenti melangkah dan mulai mengamati lingkungan sekitar, lalu\n" +
+                "kamu melihat sebuah bayangan mendekatimu.\n" +
+                "\n" +
+                "KAMU DISERANG!\n");
+        ohButton.setText("Bersiap untuk menyerang");
     }
-
 
     @FXML
-    public void lanjutkanButtonOnAction( ) throws IOException {
-        narasiKedua();
-        lanjutkanButton.setOnAction(event -> {
+    public void ohButtonOnAction( ) throws IOException {
+        StageGoblin();
+        ohButton.setOnAction(event -> {
             Parent mission = null;
             try {
-                mission = FXMLLoader.load(getClass().getResource("/sample/views/story2.fxml"));
+                mission = FXMLLoader.load(getClass().getResource("/sample/views/attackGoblin.fxml"));
             } catch (IOException e) {
                 e.printStackTrace();
             }

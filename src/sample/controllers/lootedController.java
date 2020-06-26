@@ -23,8 +23,8 @@ public class lootedController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        narasiCerita.setText("Kamu menemukan secarik kertas di tas gendong milik Goblin yang\n" +
-                "yang menyerangmu tadi.\n" +
+        narasiCerita.setText("Kamu menemukan secarik kertas di tas gendong milik\n" +
+                "Goblin yang menyerangmu tadi.\n" +
                 "\n" +
                 "'Dari pohon Beringin belok ke kanan'\n" +
                 "\n" +

@@ -2,6 +2,9 @@
 
 Void is a short RPG with turn base battle made using JavaFX and SceneBuilder.
 
+Available in-game language : 
+* Bahasa Indonesia
+
 **Developer Team :**
 * FILIA SEKAR MURTY
 * SYAHRIAL AKBAR MUZAKI
@@ -12,3 +15,8 @@ Void is a short RPG with turn base battle made using JavaFX and SceneBuilder.
 
 **Illustration :**
 * FILIA SEKAR MURTY
+
+**Backsound :**
+Poker Face Medieval vers. [uploaded by : Georgeus Kolkh on Youtube]
+
+**_Link : https://youtu.be/nK0eX3gG3N8_**

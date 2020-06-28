@@ -1,7 +1,6 @@
 **_VOID_**
 
 Void is a short RPG with turn based battle made using JavaFX and SceneBuilder.
-Available in-game language : * Bahasa Indonesia
 
 Available in-game language : 
 * Bahasa Indonesia

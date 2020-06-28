@@ -1,8 +1,8 @@
 module voidGame {
     requires javafx.fxml;
     requires javafx.controls;
-    requires kotlin.stdlib;
     requires javafx.media;
+    requires javafx.graphics;
 
     opens sample;
     opens sample.controllers;

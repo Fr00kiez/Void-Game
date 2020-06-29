@@ -20,13 +20,13 @@
             <Image url="@../../sprites/oc.png" />
          </image>
       </ImageView>
-      <Button id="attackButton" fx:id="attackButton" onAction="#attackButtonOnAction" layoutX="221.0" layoutY="261.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="159.0" text="Serang" />
-      <Button id="guardButton" fx:id="guardButton" onAction="#guardButtonOnAction" layoutX="221.0" layoutY="294.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="159.0" text="Bertahan" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363636" height="95.0" layoutX="46.0" layoutY="24.0" stroke="BLACK" strokeType="INSIDE" width="441.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363636" height="95.0" layoutX="145.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="441.0" />
-      <Label id="goblinTalks" fx:id="goblinTalks" layoutX="65.0" layoutY="40.0" text="Label" />
+      <Label id="goblinTalks" fx:id="enemyTalks" layoutX="65.0" layoutY="40.0" text="Label" />
       <Label id="playerTalks" fx:id="playerTalks" layoutX="160.0" layoutY="165.0" text="Label" />
-      <Button id="lanjutAdegan" fx:id="lanjutAdegan" onAction="#lanjutButtonOnAction" layoutX="221.0" layoutY="327.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="159.0" text="Lanjutkan" />
+      <Button id="attackButton" fx:id="attackButton" onAction="#attackButtonOnAction" layoutX="221.0" layoutY="261.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="159.0" text="Serang" />
+      <Button id="guardButton" fx:id="guardButton" onAction="#guardButtonOnAction" layoutX="221.0" layoutY="294.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="159.0" text="Bertahan" />
+      <Button id="continueButton" fx:id="continueButton" onAction="#continueButtonOnAction" layoutX="221.0" layoutY="327.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="159.0" text="Lanjutkan" />
    </children>
    <stylesheets>
       <URL value="@../styles/darkTheme.css" />

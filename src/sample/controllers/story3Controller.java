@@ -34,6 +34,7 @@ public class story3Controller implements Initializable {
         narasiCerita.setText("Oops, sepertinya kamu tidak menemukan Wizard itu.\n" +
                 "Tapi...\n" +
                 "Wizard itu yang menemukan kamu!\n" +
+                "\n" +
                 "KAMU DISERANG!\n");
         ohButton.setText("Ah, sangat mengejutkan.");
     }

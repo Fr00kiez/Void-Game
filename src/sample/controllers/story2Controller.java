@@ -45,8 +45,10 @@ public class story2Controller implements Initializable {
             try {
                 mission = FXMLLoader.load(getClass().getResource("/sample/views/attackGoblin.fxml"));
             } catch (IOException e) {
+                System.out.println("Oh, tidak.");
                 e.printStackTrace();
             }
+            assert mission != null;
             Scene missionScene = new Scene(mission);
             Stage missionStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             missionStage.hide();

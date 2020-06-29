@@ -8,7 +8,7 @@ public class Context {
     }
 
     //Getter
-    private final Player player = new Player(100, 20, (float) 0.6, "Player");
+    private final Player player = new Player();
 
     public Player getPlayer() {
         return player;

@@ -1,0 +1,61 @@
+@startuml Test
+scale 1
+class Player {
+    -name: string
+    +Player()
+    +getName()
+    +setName()
+}
+
+class Entity {
+    #name: string
+    -health: int
+    -attackDamage: int
+    -guardPercentage: float
+    -isGuarding: boolean
+    +Entity()
+    +getName()
+    +gethealth()
+    +getGuardPercentage()
+    +getGuarding()
+    +setName()
+    +setHealth()
+    +attack()
+}
+
+class EntityType {
+    +EntityType()
+}
+
+class Battle {
+    +onTalkCallBack()
+    +onTurnCallBack()
+    -BattleTurn()
+    +getPlayer()
+    +getEnemy()
+    +playerAttackAction()
+    +playerGuardAction()
+    +battleSequence()
+}
+
+class Wizard {
+    +Wizard()
+}
+
+class Goblin {
+    +Goblin()
+}
+
+class Context {
+    +getInstance()
+    +getPlayer()
+}
+
+Goblin --|> Entity
+Wizard --|> Entity
+Player --|> Entity
+Player --|> Context
+Entity --|> EntityType
+Entity --|> Battle
+
+@enduml

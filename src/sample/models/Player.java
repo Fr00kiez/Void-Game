@@ -1,16 +1,15 @@
 package sample.models;
 
-public class Player extends Entities {
+public class Player extends Entity {
     private String name;
 
-    public Player(int health, int attackDamage, float guardPercentage, String nameEnemies) {
-        super(health, attackDamage, guardPercentage, nameEnemies);
+    public Player() {
+        super(100, 20, (float) 0.6, "Player");
     }
 
     //Getter
 
     public String getName() {
-
         return name;
     }
     //Setter
